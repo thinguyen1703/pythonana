@@ -80,3 +80,6 @@ for i in list_of_job:
     lenght_of_job_title.append(len(i))
 sal['Lenght Of Job Title'] = lenght_of_job_title
 print(sal[['Lenght Of Job Title', 'TotalPayBenefits']].corr())
+
+# 16. What is the average TotalPayBenefits for each year?
+avg_total_pay_benefits_per_year = sal.groupby('Year').mean()['TotalPayBenefits']
